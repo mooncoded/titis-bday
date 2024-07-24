@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titi's bday!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #d6bebf;
+            height: 100%;
+        }
+
+        main {
+            height: calc(100% - 61px);
+        }
+
+        header {
+            background-color: #871c25;
+            border-radius: 0 0 35px 35px;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 30px;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            display: inline-block;
+            padding: 10px;
+            position: relative;
+        }
+
+        .nav-links li a:hover {
+            border-radius: 30px;
+            background-color: rgba(244, 181, 181, 0.8);
+            color: black;
+            padding: 10px;
+        }
+
+        .nav-links li a.selected {
+            border-radius: 30px;
+            background-color: #ffffff;
+            color: black;
+
+        }
+
+        .nav-links li a.selected:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 37.5%;
+            bottom: 15%;
+            width: 25%;
+            height: 2px;
+            border-radius: 60px;
+            background-color: #000;
+        }
+
+        .container {
+            padding: 2vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            height: 90vh;
+        }
+
+        .left-container {
+            width: 50%;
+            padding: 0.5em;
+            text-align: justify;
+        }
+
+        .right-container {
+            padding: 0.5em;
+            text-align: justify;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1>Titi's birthday!</h1>
+                <ul class="nav-links">
+                    <li><a onclick="window.open('home.html', '_self');"  >Home</a></li>
+                    <li><a onclick="window.open('letter.html', '_self');"   class="selected">Letter</a></li>
+                    <li><a onclick="window.open('playlist.html', '_self');"  >Playlist</a></li>
+                    <li><a onclick="window.open('login.html', '_self');"   onclick="logout()">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="left-container">
+                Mi Carolina preciosa, no tengo palabras para explicar lo feliz que me hace celebrar junto a ti otro
+                cumpleaños, acompañarte cada día y aprender nuevas cosas de ti. Verte crecer, hacer nuevas cosas y, como
+                siempre, encantarme de tus ocurrencias.
+                <br><br>
+                Hoy más que nunca espero que tengas claro lo especial que eres, eres una persona maravillosa (mucho
+                mucho). Me encantaría acompañarte presencialmente, pero como no puedo prepararé un regalo para ti,
+                quiero recordarte lo increíblemente afortunada que me siento de tenerte a mi lado y que no es algo para
+                tomar por sentado, incluso la paleta de colores está pensada en ti (se llamaba wandavision).
+                <br><br>
+                Sé que tienes claro que eres mi persona y artista favorita, te admiro mucho y hay varias cualidades que
+                te hacen ser tan tú, y que me encantan a mí de ti. No tengo tanto léxico para todo lo que siento por ti
+                y por eso siento sonar un poco repetitiva, pero hasta que seamos viejitas hablaré de lo que me encanta
+                de ti: tu inteligencia, tu humor, tu empatía, tus ocurrencias, tu creatividad, tu talento, tu
+                honestidad, tu lealtad, tu forma de expresarte, tu cosmovisión, tu paciencia, y muchas más cualidades
+                que me cautivan cada día.
+                <br><br>
+                Eres la luz de mi vida, mi sol, no solo por que la luna y el sol sean novias o por placements
+                astrológicos, sino también porque eres una persona que ilumina el mundo con su presencia, especialmente
+                el mío. Estoy profundamente agradecida de poder estar contigo, hoy y siempre, en todo momento.
+            </div>
+            <div class="right-container">
+                Estás presente en mi vida de muchas formas inlcuso cuando no hablamos, la música siempre ha sido parte
+                muy importante de mi vida y me encantar encontrarte en ella. Cada vez que escucho canciones bonitas
+                pienso en ti porque eres bonita y me haces sentir lo que describen, junté un par de ellas en el
+                siguiente apartado (playlist), aquí una pequeña advertencia y es que el reproductor sí funciona y tiene
+                la pista de las canciones que puse allí, el control de volumen funciona entonces ten cuidado con eso
+                también.
+                <br><br>
+                Eres mi lugar seguro y me hace muy feliz hacerte feliz, ver cosas que te gustan como gatitos, manzanas
+                (pink lady), algunos personajes, glee...
+                Probablemente siempre estoy pensando en ti, mi amor, siempre estoy aquí para ti.
+                <br><br>
+                Te amo completamente, mi vida, más allá de lo que puedo expresar, espero pronto tener citas y más
+                adelante poder darte chocolates y hacerte el desayuno.
+                <br><br>
+                Feliz feliz cumpleaños, mi Caro preciosa. Agradezco y celebro todos los días tu vida, gracias por ser
+                tan tú y permitirme estar a tu lao, así pegaitos.
+                <br><br>
+                Sincerely yours,
+                <br>
+                Dani
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function logout() {
+            alert('Logged out successfully!');
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+
+</html>

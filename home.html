@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titi's bday!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #d6bebf;
+            height: 100%;
+        }
+
+        main {
+            height: calc(100% - 61px);
+        }
+
+        header {
+            background-color: #871c25;
+            border-radius: 0 0 35px 35px;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 30px;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            display: inline-block;
+            padding: 10px;
+            position: relative;
+        }
+
+        .nav-links li a:hover {
+            border-radius: 30px;
+            background-color: rgba(244, 181, 181, 0.8);
+            color: black;
+            padding: 10px;
+        }
+
+        .nav-links li a.selected {
+            border-radius: 30px;
+            background-color: #ffffff;
+            color: black;
+
+        }
+
+        .nav-links li a.selected:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 37.5%;
+            bottom: 15%;
+            width: 25%;
+            height: 2px;
+            border-radius: 60px;
+            background-color: #000;
+        }
+
+        .container {
+            padding: 2vw;
+            display: flex;
+            height: 100%;
+            justify-content: space-between;
+        }
+
+        .image {
+            position: relative;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.5s ease;
+        }
+
+        .image img:last-child {
+            opacity: 0;
+        }
+
+        .image:hover img:first-child {
+            opacity: 0;
+        }
+
+        .image:hover img:last-child {
+            opacity: 1;
+        }
+
+        .message {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .envelope-wrapper {
+            background: #f5edd1;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+            width: 35.16vw;
+            height: 27vw;
+            position: relative;
+        }
+
+        .envelope-wrapper .envelope::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            z-index: 2;
+            border-top: 15.2vw solid #ecdeb8;
+            border-right: 17.6vw solid transparent;
+            border-left: 17.6vw solid transparent;
+            transform-origin: top;
+            transition: all 0.5s ease-in-out 0.7s;
+        }
+
+        .envelope-wrapper .envelope::after {
+            content: "";
+            position: absolute;
+            z-index: 2;
+            width: 0px;
+            height: 0px;
+            border-top: 14.9vw solid transparent;
+            border-right: 17.7vw solid #e6cfa7;
+            border-bottom: 12.5vw solid #e6cfa7;
+            border-left: 17.6vw solid #e6cfa7;
+        }
+
+        .envelope-wrapper .letter {
+            position: absolute;
+            right: 20%;
+            bottom: 0;
+            width: 54%;
+            height: 70%;
+            background: #fff;
+            text-align: center;
+            transition: all 1s ease-in-out;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            padding: 20px 10px;
+        }
+
+        .envelope-wrapper .letter .text {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #444;
+            text-align: left;
+            font-size: 10px;
+            margin: 0px 6px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .envelope-wrapper .heart {
+            position: absolute;
+            top: 50.7%;
+            left: 49.95%;
+            width: 1.2vw;
+            height: 1.2vw;
+            background: #871c25;
+            z-index: 4;
+            transform: translate(-50%, -20%) rotate(45deg);
+            transition: transform 0.5s ease-in-out 1s;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .envelope-wrapper .heart:before,
+        .envelope-wrapper .heart:after {
+            content: "";
+            position: absolute;
+            width: 1.2vw;
+            height: 1.2vw;
+            background-color: #871c25;
+            border-radius: 50%;
+        }
+
+        .envelope-wrapper .heart:before {
+            top: -7.5px;
+        }
+
+        .envelope-wrapper .heart:after {
+            right: 7.5px;
+        }
+
+        .envelope-wrapper.flap>.envelope:before {
+            transform: rotateX(180deg);
+            z-index: 0;
+        }
+
+        .envelope-wrapper.flap>.envelope>.letter {
+            bottom: 100px;
+            transform: scale(1.5);
+            transition-delay: 1s;
+        }
+
+        .envelope-wrapper.flap>.heart {
+            transform: rotate(90deg);
+            transition-delay: 0.4s;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1>Titi's birthday!</h1>
+                <ul class="nav-links">
+                    <li><a onclick="window.open('home.html', '_self');"  class="selected">Home</a></li>
+                    <li><a onclick="window.open('letter.html', '_self');"  >Letter</a></li>
+                    <li><a onclick="window.open('playlist.html', '_self');"  >Playlist</a></li>
+                    <li><a onclick="window.open('login.html', '_self');"   onclick="logout()">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="image">
+                <img src="./assets/birthday-girl.png" alt="bday-girl" width="80%">
+                <img src="./assets/birthday-girl-2.png" alt="bday-girl-2" width="80%">
+            </div>
+            <div class="message">
+                <div class="envelope-wrapper">
+                    <div class="envelope">
+                        <div class="letter">
+                            <div class="text">
+                                <strong>¡Feliz cumpleaños, mi Titi!</strong>
+                                <p>
+                                    Eres muy importante para mí y quería hacer algo un poco diferente, sé que es un poco
+                                    como
+                                    una card, pero está hecho desde cero <i>para <strong>ti</strong></i>.&nbsp;Espero
+                                    que te guste, como tú a mí ;).
+                                </p>
+                                <img src="./assets/drawing.png" alt="drawing of us" width="50px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="heart"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function logout() {
+            alert('Logged out successfully!');
+            window.location.href = 'login.html';
+        }
+
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
+</body>
+
+</html>
